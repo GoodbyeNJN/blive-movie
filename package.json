@@ -1,0 +1,23 @@
+{
+  "name": "blive-movie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoodbyeNJN/blive-movie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GoodbyeNJN/blive-movie/issues"
+  },
+  "homepage": "https://github.com/GoodbyeNJN/blive-movie#readme",
+  "dependencies": {
+    "bilibili-danmaku-client": "^2.0.0",
+    "request": "^2.88.0"
+  }
+}
