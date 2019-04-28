@@ -10,25 +10,25 @@ class DmService extends EventEmitter {
         this.dmSender = new DmSender(postOption);
 
         this.dmListener.on("onDmListenerStart", () => {
-            this.emit("onDmServiceStart");
+            this.emit("onDmServiceStart", roomID);
         });
         this.dmListener.on("onDmListenerStop", () => {
-            this.emit("onDmServiceStop");
+            this.emit("onDmServiceStop", roomID);
         });
         this.dmListener.on("onDmListenerError", err => {
+            this.emit("onDmServiceError", err);
             console.log(err);
         });
         this.dmListener.on("onGetNewDm", dm => {
             this.emit("onGetNewDm", dm);
-            console.log(dm);
         });
 
         this.dmSender.on("onDmSenderError", err => {
+            this.emit("onDmServiceError", err);
             console.log(err);
         });
         this.dmSender.on("onSendNewDm", dm => {
             this.emit("onSendNewDm", dm);
-            console.log(dm);
         });
     }
     start() {
